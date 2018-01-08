@@ -130,12 +130,12 @@ def process_video(videofile, subclip=None, alpha=None):
         lane.alpha = alpha
     try:
         output = 'test_videos_output/' + videofile
-        output = output.rsplit('.')[0] + '.avi'
+        #output = output.rsplit('.')[0] + '.avi'
         input_clip = VideoFileClip(videofile)
         if subclip:
             input_clip = input_clip.subclip(*subclip)
         output_clip = input_clip.fl_image(process_image)
-        output_clip.write_videofile(output, audio=False, codec='png')
+        output_clip.write_videofile(output, audio=False)#, codec='png')
     except:
         lane.left_line.alpha, lane.rght_line.alpha = alpha_orig
         raise

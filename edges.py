@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 
-def threshold(img, s_thresh=(100, 255), sx_thresh=(20, 255), l_thresh=(128, 255), use_sharr=True, rgb=False):
+def threshold(img, s_thresh=(100, 255), sx_thresh=(20, 255), l_thresh=(112, 255), use_sharr=True, rgb=False):
     """Apply threshold to image based on color and/or gradient.
     Inspired to https://classroom.udacity.com/nanodegrees/nd013/parts/fbf77062-5703-404e-b60c-95b78b2f3f9e/modules/2b62a1c3-e151-4a0e-b6b6-e424fa46ceab/lessons/40ec78ee-fb7c-4b53-94a8-028c5c60b858/concepts/a1b70df9-638b-46bb-8af0-12c43dcfd0b4
     """
